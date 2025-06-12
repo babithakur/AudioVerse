@@ -1,0 +1,117 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AudioVerse"
+        android:textColor="@color/blue"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textFontWeight="700"
+        android:layout_marginTop="10dp"/>
+    <ListView
+        android:id="@+id/songListView"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:background="@drawable/border"
+        android:divider="@color/grey"
+        android:dividerHeight="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/white"
+        android:thumbTint="@color/white" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/elapsed_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginRight="140dp"
+            android:layout_marginLeft="12dp"/>
+        <TextView
+            android:id="@+id/total_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="12dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play a song..."
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/song_played"
+        android:textColor="@color/blue"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artist_played"
+        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:src="@drawable/backwardsolid"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/button_background"
+            android:padding="10dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="12dp"/>
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:src="@drawable/circleplaysolid"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/button_background"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:background="@drawable/button_background"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/forwardsolid"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:layout_marginRight="90dp"/>
+    </LinearLayout>
+</LinearLayout>
